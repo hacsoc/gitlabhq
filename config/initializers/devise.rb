@@ -195,7 +195,10 @@ Devise.setup do |config|
   # selecting the provider you require.
   # Check the wiki for more information on setting up on your models
 
-  config.omniauth :cas, url: 'https://login.case.edu/cas', disable_ssl_verification: false
+  config.omniauth :cas,
+    host: 'login.case.edu', login_url: '/cas/login',
+    service_validate_url: '/cas/serviceValidate', 
+    disable_ssl_verification: false
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
