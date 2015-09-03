@@ -216,10 +216,7 @@ production: &base
     # arguments, followed by optional 'args' which can be either a hash or an array.
     # Documentation for this is available at http://doc.gitlab.com/ce/integration/omniauth.html
     providers:
-        { name: 'cas',
-          app_id: 'CAS',
-          app_secret: 'N/A'
-        }
+        - { name: 'cas' }
       # - { name: 'google_oauth2', 
       #     label: 'Google',
       #     app_id: 'YOUR_APP_ID', 
